@@ -4,8 +4,30 @@
   padding: 0;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+}
+
 ul {
   list-style: none;
+}
+
+h2,h3,h4,h5,h6 {
+  color: white;
+}
+
+a {
+  color: lightgrey;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
 }
 /* main */
 main {
@@ -16,24 +38,87 @@ main {
 aside {
   display: flex;
   width: 200px;
-  background: blue;
   flex-direction: column;
   justify-content: space-between;
+  background-color: black;
 }
 
-nav {
-  background-color: pink;
+aside nav li {
+  padding: 5px 15px;
+}
+
+aside nav li:first-child a {
+  color: white;
+}
+
+nav .logo img {
+  width: 120px;
+  margin: 15px 10px;
+}
+
+nav ul img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+nav i {
+  margin-right: 10px;
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+aside .playlist,
+aside .create-playlist {
+  margin-top: 15px;
+  margin-left: 15px;
 }
 
 aside .playlist {
-  background-color: black;
   flex-grow: 1;
-  color: white;
   overflow-y: scroll;
 }
 
-aside .aside-footer {
+aside button {
+  width: 40px;
+  height: 40px;
+  background-color: lightgrey;
+  color: black;
+  font-size: 17px;
+  margin: 5px 0;
+  margin-right: 5px;
+}
+
+aside .create-playlist a {
+  font-size: 12px;
+}
+
+aside .playlist li {
+  padding: 5px 0;
+}
+
+.aside-footer {
+  padding: 10px 15px;
+}
+
+.aside-footer img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
   background-color: grey;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.aside-footer hr {
+  margin-top: 5px;
+  margin-bottom: 8px;
+}
+
+.aside-footer .account h4 {
+  display: inline-block;
+  vertical-align: middle;
 }
 /* /aside */
 
@@ -67,6 +152,7 @@ section ul {
 
 .section-nav ul {
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .section-nav ul li {
@@ -85,18 +171,30 @@ section ul li img {
 /* /main */
 /* footer */
 footer {
+  position: relative;
   display: flex;
+  align-items: center;
   background: green;
   height: 90px;
   z-index: 2;
 }
 
 footer > * {
-  flex-basis: 200px;
+  flex-basis: 150px;
+  flex-grow: 1;
+  display: flex;
 }
 
 footer .player {
-  flex-grow: 1;
+  flex-grow: 15;
   background-color: lightgreen;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
 }
 /* /footer */
