@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+/* main */
+main {
+  display: flex;
+  height: calc(100vh - 90px);
+}
+/* aside */
+aside {
+  display: flex;
+  width: 200px;
+  background: blue;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+nav {
+  background-color: pink;
+}
+
+aside .playlist {
+  background-color: black;
+  flex-grow: 1;
+  color: white;
+  overflow-y: scroll;
+}
+
+aside .aside-footer {
+  background-color: grey;
+}
+/* /aside */
+
+section {
+  flex-basis: 250px;
+  flex-grow: 1;
+  background-color: red;
+  overflow-y: scroll;
+  padding-top: 60px;
+}
+
+section > * {
+  margin-bottom: 30px;
+}
+
+.section-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 60px;
+  width: calc(100% - 200px);
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: right;
+  padding: 20px;
+}
+
+section ul {
+  display: flex;
+  width: 100%;
+}
+
+.section-nav ul {
+  justify-content: center;
+}
+
+.section-nav ul li {
+  padding: 10px;
+}
+
+section ul:not(:first-child) li {
+  width: calc(100% / 6);
+  padding: 5px;
+  text-align: center;
+}
+
+section ul li img {
+  width: 100%;
+}
+/* /main */
+/* footer */
+footer {
+  display: flex;
+  background: green;
+  height: 90px;
+  z-index: 2;
+}
+
+footer > * {
+  flex-basis: 200px;
+}
+
+footer .player {
+  flex-grow: 1;
+  background-color: lightgreen;
+}
+/* /footer */
