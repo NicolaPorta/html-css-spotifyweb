@@ -11,7 +11,9 @@
 <body>
   <!-- main -->
   <main>
+    <!-- aside -->
     <aside>
+      <!-- nav -->
       <nav>
         <a href="#">
           <div class="logo">
@@ -39,6 +41,8 @@
           </li>
         </ul>
       </nav>
+      <!-- /nav -->
+      <!-- new playlist -->
       <div class="create-playlist">
         <h4>PLAYLIST</h4>
         <a href="#">
@@ -57,6 +61,9 @@
           <li><a href="#">Nuova Playlist</a></li>
         </ul>
       </div>
+      <!-- new playlist -->
+
+      <!-- aside footer -->
       <div class="aside-footer">
         <a href="#">
           <i class="far fa-arrow-alt-circle-down"></i>
@@ -68,7 +75,11 @@
           <h4>Nicola Porta</h4>
         </a>
       </div>
+      <!-- /aside footer -->
     </aside>
+    <!-- /aside -->
+
+    <!-- section -->
     <section>
       <div class="section-header">
         <a href="#">EFFETTUA L'UPGRADE</a>
@@ -83,6 +94,8 @@
           <li><a href="#">scopri</a></li>
         </ul>
       </div>
+      <!-- section main -->
+      <!-- Recently Played -->
       <div class="recently">
         <h2>Recently Played</h2>
         <ul>
@@ -148,6 +161,9 @@
           </li>
         </ul>
       </div>
+      <!-- /Recently Played -->
+
+      <!-- Create Mix -->
       <div class="create-for-you">
         <h2>Creato per Nicola Porta</h2>
         <p>Più ascolti, più accurati saranno i suggerimenti</p>
@@ -174,6 +190,9 @@
           </li>
         </ul>
       </div>
+      <!-- /Create Mix -->
+
+      <!-- Popular Artist -->
       <div class="most-popular">
         <h2>Artisti più popolari</h2>
         <p>Più ascolti, più accurati saranno i suggerimenti</p>
@@ -200,18 +219,21 @@
           </li>
         </ul>
       </div>
+      <!-- /Popular Artist -->
+      <!-- /section main -->
     </section>
   </main>
   <!-- /main -->
 
   <!-- footer -->
   <footer>
+    <!-- Track playing -->
     <div class="footer-left">
       <div class="track">
         <img src="img/BoldAsLove.jpg" alt="">
         <div class="title">
           <h5>Jimi Hendrix</h5>
-          <p>Bold As Love</p>
+          <a href="#"><p>Bold As Love</p></a>
         </div>
       </div>
       <div class="preferences">
@@ -219,6 +241,9 @@
         <a href="#"><i class="far fa-heart"></i></a>
       </div>
     </div>
+    <!-- /Track playing -->
+
+    <!-- Media player -->
     <div class="player">
       <ul>
         <li>
@@ -239,18 +264,22 @@
       </ul>
       <div class="player-bar">
         <span>0:59</span>
-        <span id="time-bar"></span>
+        <input id="time-bar" type="range" min="0" max="156" name="time" value="59">
         <span>2:36</span>
       </div>
     </div>
+    <!-- /Media player -->
+
+    <!-- Player settings -->
     <div class="footer-right">
       <ul>
         <li><a href="#"><i class="fas fa-list-ul"></i></a></li>
         <li><a href="#"><i class="fas fa-desktop"></i></a></li>
         <li><a href="#"><i class="fas fa-volume-up"></i></a></li>
       </ul>
-      <span id="volume-bar"></span>
+      <input id="volume-bar" type="range" min="0" max="100" name="volume" value="15">
     </div>
+    <!-- /Player settings -->
   </footer>
   <!-- /footer -->
 </body>
