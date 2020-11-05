@@ -22,6 +22,11 @@ a {
   color: #a5a6a8;
   text-decoration: none;
   display: inline-block;
+  transition: color 0.5s;
+}
+
+a:hover {
+  color: white;
 }
 
 span {
@@ -58,14 +63,18 @@ aside nav li:first-child a {
 }
 
 nav .logo img {
-  width: 120px;
+  width: 160px;
   margin: 15px 10px;
+}
+
+nav ul li:focus-within{
+  border-left: 4px solid #2fdb04;
 }
 
 nav ul img {
   width: 24px;
   height: 24px;
-  margin-right: 10px;
+  margin-right: 5px;
   vertical-align: middle;
 }
 
@@ -90,21 +99,28 @@ aside .playlist {
   min-height: 80px;
 }
 
-aside button {
+aside .create-playlist i {
   width: 40px;
   height: 40px;
   background-color: #a5a6a8;
   color: black;
   font-size: 17px;
-  margin: 5px 0;
+  margin-top: 10px;
   margin-right: 5px;
+  text-align: center;
+  line-height: 40px;
+  transition: background-color 0.5s;
+}
+
+aside .create-playlist a:hover i {
+  background-color: white;
 }
 
 aside .create-playlist a {
   font-size: 16px;
 }
 
-aside .playlist li {
+aside .playlist li a {
   padding: 5px 0;
 }
 
@@ -209,7 +225,7 @@ section p {
 
 .section-nav {
   width: 100%;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .section-nav ul {
@@ -217,15 +233,24 @@ section p {
   flex-wrap: wrap;
   text-transform: uppercase;
   padding: 0 50px;
-  text-align: center;
 }
 
 .section-nav ul li {
   margin-bottom: 20px;
+  text-align: center;
+  padding: 0 15px;
+  position: relative;
 }
 
-.section-nav ul li:not(:last-child) {
-  padding-right: 25px;
+.section-nav a:focus-within:after {
+  content:"";
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 30%;
+  height: 3px;
+  background-color: #2fdb04;
 }
 
 section ul:not(:first-child) li {
@@ -316,7 +341,7 @@ footer ul {
 
 .footer-left img {
   width: 50px;
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 .footer-left .title {
@@ -379,11 +404,33 @@ footer .player-bar span:not(#time-bar) {
   font-size: 12px;
 }
 
-footer .player-bar #time-bar{
+footer .player-bar #time-bar,
+.footer-right #volume-bar {
   height: 3px;
   background-color: #737578;
   flex-grow: 1;
   margin: auto;
+}
+
+.footer-right {
+  justify-content: space-between;
+  padding-right: 10px;
+}
+
+.footer-right ul {
+  justify-content: space-between;
+  width: 70px;
+  margin-right: 10px;
+}
+
+.footer-right a {
+  color: #a5a6a8;
+  font-size: 12px;
+  transition: color 0.5s;
+}
+
+.footer-right a:hover {
+  color: white;
 }
 /* /footer */
 @media screen and (max-width: 1200px) {
