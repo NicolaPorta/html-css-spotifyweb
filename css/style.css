@@ -19,8 +19,13 @@ h2,h3,h4,h5,h6 {
 }
 
 a {
-  color: lightgrey;
+  color: #a5a6a8;
   text-decoration: none;
+  display: inline-block;
+}
+
+span {
+  display: inline-block;
 }
 
 ::-webkit-scrollbar {
@@ -38,7 +43,7 @@ main {
 /* aside */
 aside {
   display: flex;
-  width: 200px;
+  width: 230px;
   flex-direction: column;
   justify-content: space-between;
   background-color: black;
@@ -64,8 +69,11 @@ nav ul img {
   vertical-align: middle;
 }
 
+aside i {
+  margin-right: 5px;
+}
+
 nav i {
-  margin-right: 10px;
   font-size: 24px;
   vertical-align: middle;
 }
@@ -85,7 +93,7 @@ aside .playlist {
 aside button {
   width: 40px;
   height: 40px;
-  background-color: lightgrey;
+  background-color: #a5a6a8;
   color: black;
   font-size: 17px;
   margin: 5px 0;
@@ -129,16 +137,29 @@ aside .playlist li:last-child {
 /* /aside */
 
 section {
-  flex-basis: 250px;
+  flex-basis: 300px;
   flex-grow: 1;
+  flex-shrink: 0;
   background-color: #1c1f38;
   overflow-y: auto;
-  padding-top: 60px;
+  padding-top: 70px;
   padding-left: 15px;
 }
 
 section > *:not(:last-child) {
   margin-bottom: 30px;
+}
+
+section  h2 {
+  font-size: 30px;
+}
+
+section  h4 {
+  font-size: 20px;
+}
+
+section  h2, section > * > p {
+  padding-left: 0.8%;
 }
 
 section ul {
@@ -147,9 +168,9 @@ section ul {
 }
 
 section p {
-  color: lightgrey;
+  color: #a5a6a8;
   margin-top: 5px;
-  font-size: 10px;
+  font-size: 15px;
 }
 
 .section-header {
@@ -157,26 +178,54 @@ section p {
   top: 0;
   right: 0;
   height: 60px;
-  width: calc(100% - 200px);
+  width: calc(100% - 230px);
   background-color: rgba(0, 0, 0, 0.5);
   text-align: right;
-  padding: 20px;
   z-index: 1;
+}
+
+.section-header a {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 200px;
+  height: 40px;
+  line-height: 38px;
+  border: 1px solid white;
+  border-radius: 25px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.section-header a:hover {
+  width: 220px;
+  height: 45px;
+  margin-right: 10px;
+  line-height: 45px;
+  font-size: 13px;
 }
 
 .section-nav {
   width: 100%;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .section-nav ul {
   justify-content: center;
   flex-wrap: wrap;
   text-transform: uppercase;
+  padding: 0 50px;
+  text-align: center;
+}
+
+.section-nav ul li {
+  margin-bottom: 20px;
 }
 
 .section-nav ul li:not(:last-child) {
-  padding-right: 10px;
+  padding-right: 25px;
 }
 
 section ul:not(:first-child) li {
@@ -235,28 +284,106 @@ footer {
   position: relative;
   display: flex;
   align-items: center;
-  background: green;
+  background: #272727;
   height: 90px;
   z-index: 2;
+  padding: 0 10px;
 }
 
 footer > * {
-  flex-basis: 150px;
+  flex-basis: 200px;
   flex-grow: 1;
   display: flex;
 }
 
-footer .player {
-  flex-grow: 15;
-  background-color: lightgreen;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+footer p {
+  font-size: 10px;
+  color: #a5a6a8;
 }
 
 footer ul {
   display: flex;
   justify-content: center;
+}
+
+.footer-left {
+  justify-content: space-between;
+}
+
+.footer-left > * {
+  display: flex;
+}
+
+.footer-left img {
+  width: 50px;
+  margin-right: 5px;
+}
+
+.footer-left .title {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.footer-left .preferences {
+  display: flex;
+  width: 50px;
+  justify-content: space-between;
+}
+
+.footer-left a {
+  padding: 2px;
+  margin: auto;
+}
+
+footer .player {
+  flex-grow: 15;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #a5a6a8;
+}
+
+footer .player ul {
+  width: 250px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+footer .player ul li {
+  margin: auto;
+}
+
+footer .player button {
+  background-color: transparent;
+  border: none;
+  font-size: 12px;
+  color: white;
+}
+
+.player #play {
+  font-size: 22px;
+}
+
+footer .player-bar {
+  display: flex;
+  width: 60%;
+  min-width: 250px;
+  margin-top: 5px;
+}
+
+footer .player-bar span:not(#time-bar) {
+  padding: 0 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+footer .player-bar #time-bar{
+  height: 3px;
+  background-color: #737578;
+  flex-grow: 1;
+  margin: auto;
 }
 /* /footer */
 @media screen and (max-width: 1200px) {
@@ -284,6 +411,10 @@ footer ul {
   aside {
     width: 50px;
     text-align: center;
+  }
+
+  aside i {
+    margin-right: 0;
   }
 
   aside span,
