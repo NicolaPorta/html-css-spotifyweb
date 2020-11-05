@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/style.css">
   <title>My Spotify</title>
@@ -25,14 +25,24 @@
               <span>Home</span>
             </a>
           </li>
-          <li><a href="#"><i class="fas fa-search"></i>Cerca</a></li>
-          <li><a href="#"><i class="fas fa-book-reader"></i>La tua libreria</a></li>
+          <li>
+            <a href="#">
+              <i class="fas fa-search"></i>
+              <span>Cerca</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-book-reader"></i>
+              <span>La tua libreria</span>
+            </a>
+          </li>
         </ul>
       </nav>
       <div class="create-playlist">
         <h4>PLAYLIST</h4>
         <button type="button" name="button"><i class="fas fa-plus"></i></button>
-        <a href="#">Crea Playlist</a>
+        <a href="#"><span>Crea Playlist</span></a>
       </div>
       <div class="playlist">
         <ul>
@@ -46,7 +56,10 @@
         </ul>
       </div>
       <div class="aside-footer">
-        <a href="#"><i class="far fa-arrow-alt-circle-down"></i> Installa app</a>
+        <a href="#">
+          <i class="far fa-arrow-alt-circle-down"></i>
+          <span>Installa app</span>
+        </a>
         <hr>
         <a class="account"href="#">
           <img src="img/account.png" alt="">
@@ -55,93 +68,133 @@
       </div>
     </aside>
     <section>
-      <div class="section-header text-right">
-        <button>UPGRADE</button>
+      <div class="section-header">
+        <a href="#">UPGRADE</a>
       </div>
       <div class="section-nav">
         <ul>
-          <li>In evidenza</li>
-          <li>podcast</li>
-          <li>classifiche</li>
-          <li>generi e mood</li>
-          <li> nuove uscite</li>
-          <li>scopri</li>
+          <li><a href="#">In evidenza</a></li>
+          <li><a href="#">podcast</a></li>
+          <li><a href="#">classifiche</a></li>
+          <li><a href="#">generi e mood</a></li>
+          <li><a href="#">nuove uscite</a></li>
+          <li><a href="#">scopri</a></li>
         </ul>
       </div>
       <div class="recently">
-        <h3>RECENTLY PLAYED</h3>
+        <h2>Recently Played</h2>
         <ul>
           <li>
-            <img src="img/metallica.jpg" alt="gruppo1">
-            <div class="layover"></div>
-            <h5></h5>
-            <p></p>
+            <a href="#">
+              <div class="image">
+                <img src="img/atom.jpg" alt="gruppo1">
+                <div class="layover"><i class="far fa-play-circle"></i></div>
+              </div>
+              <h4>Atom Heart Mother</h4>
+              <p>Pink Floyd</p>
+            </a>
           </li>
           <li>
-            <img src="" alt="">
-            <div class="layover"></div>
-            <h5></h5>
-            <p></p>
+            <a href="#">
+              <div class="image">
+                <img src="img/jimi.jpg" alt="">
+                <div class="layover"><i class="far fa-play-circle"></i></div>
+              </div>
+              <h4>The Jimi Hendrix Experience</h4>
+              <p>The Burning of the Midnight Lamp</p>
+            </a>
           </li>
           <li>
-            <img src="" alt="">
-            <div class="layover"></div>
-            <h5></h5>
-            <p></p>
+            <a href="#">
+              <div class="image">
+                <img src="img/nevermind.jpg" alt="">
+                <div class="layover"><i class="far fa-play-circle"></i></div>
+                <h4></h4>
+                <p></p>
+              </div>
+            </a>
           </li>
           <li>
-            <img src="" alt="">
-            <div class="layover"></div>
-            <h5></h5>
-            <p></p>
+            <a href="#">
+              <div class="image">
+                <img src="img/The-clash.jpeg" alt="">
+                <div class="layover"><i class="far fa-play-circle"></i></div>
+                <h4></h4>
+                <p></p>
+              </div>
+            </a>
           </li>
           <li>
-            <img src="" alt="">
-            <div class="layover"></div>
-            <h5></h5>
-            <p></p>
+            <a href="#">
+              <div class="image">
+                <img src="img/The-Division-Bell-1994.jpg" alt="">
+                <div class="layover"><i class="far fa-play-circle"></i></div>
+                <h4></h4>
+                <p></p>
+              </div>
+            </a>
           </li>
           <li>
-            <img src="" alt="">
-            <div class="layover"></div>
-            <h5></h5>
-            <p></p>
+            <a href="#">
+              <div class="image">
+                <img src="img/thefinalcut.webp" alt="">
+                <div class="layover"><i class="far fa-play-circle"></i></div>
+                <h4></h4>
+                <p></p>
+              </div>
+            </a>
           </li>
         </ul>
       </div>
       <div class="create-for-you">
-        <h2></h2>
-        <p></p>
+        <h2>Creato per Nicola Porta</h2>
+        <p>Più ascolti, più accurati saranno i suggerimenti</p>
         <ul>
           <li>
-            <img src="img/metallica.jpg" alt="">
-            <div class="layover"></div>
-            <h5></h5>
-            <p></p>
+            <a href="#">
+              <div class="image">
+                <img src="img/mix1.jpg" alt="">
+                <div class="layover"><i class="far fa-play-circle"></i></div>
+              </div>
+              <h4></h4>
+              <p></p>
+            </a>
           </li>
           <li>
-            <img src="" alt="">
-            <div class="layover"></div>
-            <h5></h5>
-            <p></p>
+            <a href="#">
+              <div class="image">
+                <img src="img/mix2.jpg" alt="">
+                <div class="layover"><i class="far fa-play-circle"></i></div>
+              </div>
+              <h4></h4>
+              <p></p>
+            </a>
           </li>
         </ul>
       </div>
       <div class="most-popular">
-        <h2></h2>
-        <p></p>
+        <h2>Artisti più popolari</h2>
+        <p>Più ascolti, più accurati saranno i suggerimenti</p>
         <ul>
           <li>
-            <img src="img/metallica.jpg" alt="">
-            <div class="layover"></div>
-            <h4>Master of Puppets</h4>
-            <h5>Metallica</h5>
+            <a href="#">
+              <div class="image">
+                <img src="img/pinkfloyd.jpg" alt="">
+                <div class="layover"></div>
+              </div>
+              <h4>Master of Puppets</h4>
+              <h4>Metallica</h4>
+            </a>
           </li>
           <li>
-            <img src="" alt="">
-            <div class="layover"></div>
-            <h5></h5>
-            <p></p>
+            <a href="#">
+              <div class="image">
+                <img src="img/jimi2.jpg" alt="">
+                <div class="layover"></div>
+              </div>
+              <h4>Master of Puppets</h4>
+              <h4>Metallica</h4>
+            </a>
           </li>
         </ul>
       </div>
