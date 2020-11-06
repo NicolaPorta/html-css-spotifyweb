@@ -275,6 +275,10 @@ section p {
 /* /section nav */
 
 /* section main */
+section ul:not(:first-child) {
+  max-width: 100%;
+}
+
 section ul:not(:first-child) li {
   width: calc(100% / 6);
   min-width: 100px;
