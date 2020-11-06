@@ -169,7 +169,7 @@ aside .playlist li:last-child {
 
 /* section */
 section {
-  flex-basis: 300px;
+  flex-basis: 350px;
   flex-grow: 1;
   flex-shrink: 0;
   background-color: #1c1f38;
@@ -183,11 +183,11 @@ section > *:not(:last-child) {
 }
 
 section  h2 {
-  font-size: 30px;
+  font-size: 28px;
 }
 
 section  h4 {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 section  h2, section > * > p {
@@ -202,7 +202,7 @@ section ul {
 section p {
   color: #a5a6a8;
   margin-top: 5px;
-  font-size: 15px;
+  font-size: 12px;
 }
 /* section header */
 .section-header {
@@ -336,6 +336,7 @@ footer {
   height: 90px;
   z-index: 2;
   padding: 0 10px;
+  min-width: 400px;
 }
 
 footer > * {
@@ -400,7 +401,7 @@ footer .player {
 }
 
 footer .player ul {
-  width: 250px;
+  width: 200px;
   justify-content: space-between;
   align-items: flex-start;
 }
@@ -438,7 +439,7 @@ footer .player button:focus-within {
 footer .player-bar {
   display: flex;
   width: 60%;
-  min-width: 250px;
+  min-width: 200px;
   margin-top: 10px;
 }
 
@@ -461,13 +462,12 @@ footer .player-bar {
 }
 
 footer .player-bar span {
-  padding: 0 20px;
+  padding: 0 3%;
   color: white;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 9px;
 }
 /* /Media player */
-
 footer .player-bar #time-bar,
 .footer-right #volume-bar {
   height: 3px;
@@ -478,20 +478,24 @@ footer .player-bar #time-bar,
 /* Player settings */
 .footer-right {
   justify-content: space-between;
-  padding-right: 10px;
+  padding-right: 1%;
 }
 
 .footer-right ul {
   justify-content: space-between;
   width: 70px;
-  margin-right: 10px;
+  margin-right: 1%;
 }
 
 .footer-right a {
   color: #a5a6a8;
   font-size: 12px;
-  margin-left: 11px;
+  padding: 0 5px;
   transition: color 0.5s;
+}
+
+.footer-right li:first-child a {
+  margin: 0;
 }
 
 .footer-right a:hover {
@@ -519,7 +523,7 @@ footer .player-bar #time-bar,
 /* /footer */
 
 /* MEDIAQUERY */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 
   section ul {
     flex-wrap: wrap;
@@ -581,6 +585,26 @@ footer .player-bar #time-bar,
 
   .section-header {
     width: calc(100% - 50px);
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  footer > * {
+    flex-basis: calc(100% / 3);
+    min-width: calc(380px / 3);
+    flex-shrink: 0;
+  }
+
+  footer .player ul {
+    width: 100%;
+  }
+
+  footer .player-bar {
+    width: 100%;
+    min-width: 100px;
+    flex-shrink: 0;
   }
 
 }
